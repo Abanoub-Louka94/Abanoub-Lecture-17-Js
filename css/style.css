@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.page {
+    height: 100vh;
+}
+
+nav {
+    
+}
+
+nav .one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .one .logo {
+    
+}
+
+nav .one .search-form {
+    
+}
+
+nav .one .search-form form#search {
+    position: relative;
+}
+
+nav .one .search-form form#search input[type = text] {
+    width: 500px;
+    outline: none;
+    border: 1px solid rgb(0, 0, 0, .3);
+    padding: 8px 13px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+nav .one .search-form form#search a {
+    position: absolute;
+    height: 100%;
+    background: aqua;
+    border-radius: 0 16px 16px 0;
+    padding: 7px 26px;
+    font-weight: bold;
+    color: white;
+    right: 0;
+}
+
+nav .one .login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+}
+
+nav .one .login img {
+    display: block;
+    width: 50px;
+}
+
+.content-container {
+    display: flex;
+}
+
+.content-container .filtration {
+    width: 250PX;
+}
+
+.content-container .filtration .my-form {
+    
+}
+
+.content-container .filtration .my-form input,
+.content-container .filtration .my-form label {
+    display: inline-block;
+}
+
+.content-container .filtration .my-form input {
+    margin-right: 5px;
+}
+
+.content-container .products {
+    display: flex;
+    width: 100%;
+
+}
+
+.content-container .products .card {
+    
+}
+
