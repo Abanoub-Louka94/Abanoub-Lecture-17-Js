@@ -1,103 +1,55 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-ul {
-    list-style: none;
-}
-
-.page {
-    height: 100vh;
-}
-
-nav {
-    
-}
-
-nav .one {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .one .logo {
-    
-}
-
-nav .one .search-form {
-    
-}
-
-nav .one .search-form form#search {
-    position: relative;
-}
-
-nav .one .search-form form#search input[type = text] {
-    width: 500px;
-    outline: none;
-    border: 1px solid rgb(0, 0, 0, .3);
-    padding: 8px 13px;
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
-}
-
-nav .one .search-form form#search a {
-    position: absolute;
-    height: 100%;
-    background: aqua;
-    border-radius: 0 16px 16px 0;
-    padding: 7px 26px;
+button {
+    cursor: pointer;
     font-weight: bold;
+    text-transform: capitalize;
     color: white;
-    right: 0;
+    display: block;
+    border: none;
+    background-color: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
-nav .one .login {
+.container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    column-gap: 50px;
+    row-gap: 40px;
 }
 
-nav .one .login img {
+.card-container {
+    width: 24%;
+}
+
+.card-container .card .brand-image img {
+    max-width: 100%;
+    height: 100%;
     display: block;
-    width: 50px;
 }
 
-.content-container {
-    display: flex;
+.card-container .card .about {
+    max-height: 80px;
+    overflow: hidden;
 }
 
-.content-container .filtration {
-    width: 250PX;
+.card-container .card .about .price {
+    padding: 5px 0;
 }
-
-.content-container .filtration .my-form {
-    
+.card-container .card .about .discrip p {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.4);
 }
-
-.content-container .filtration .my-form input,
-.content-container .filtration .my-form label {
-    display: inline-block;
-}
-
-.content-container .filtration .my-form input {
-    margin-right: 5px;
-}
-
-.content-container .products {
-    display: flex;
-    width: 100%;
-
-}
-
-.content-container .products .card {
-    
-}
-

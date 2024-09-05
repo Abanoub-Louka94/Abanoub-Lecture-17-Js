@@ -1,71 +1,53 @@
-class Form {
-    constructor(id) {
-        this.id = id;
-        const form = document.createElement('form');
-        form.id = this.id,
-        form.className = 'my-form';
-        const aside = document.querySelector('.filtration .form-container');
-        aside.appendChild(form);
+// ajax methods
+
+// new XMLHttpRequest()
+// abort()
+// getResponseHeader()
+// getAllResponseHeaders()
+// open(method, url, async, user, password)
+// send()
+// send(String)
+// sendRequestHeader()
+
+const getData = document.getElementById('get-data');
+const content = document.querySelector('.container');
+
+const myData = function data() {
+
+    // create the request 
+    const myRequest = new XMLHttpRequest();
+
+    // open the request
+    myRequest.open('get', 'https://api.escuelajs.co/api/v1/products', true);
+
+    // send the request
+    myRequest.send();
+
+    //load the request
+    myRequest.onload = function() {
+        products = JSON.parse(this.responseText);
+        console.log(products);
+        for (let product of products) {
+            const result = document.createElement('section');
+            result.className = 'card-container' ;
+            result.innerHTML = `
+                <section class="card">
+                        <section class="brand-image">
+                            <img src="${product.category.image}" alt="img">
+                        </section>
+                        <section class="about">
+                            <article class="price">
+                                <span>${product.price}</span>
+                            </article>
+                            <article class="discrip">
+                                <p>${product.description}</p>
+                            </article>
+                        </section>
+                    </section>
+            `;
+            content.appendChild(result)
+        }
     }
 }
 
-class Input {
-    constructor(type, name, id) {
-        this.type = type,
-        this.id = id
-        this.name = name;
-        const input = document.createElement('input');
-        input.type = this.type,
-        input.id = this.id,
-        input.name = this.name;
-        const form = document.querySelector('aside .my-form');
-        form.appendChild(input);
-    }
-}
-
-class Label {
-    constructor(value,className) {
-        this.value = value;
-        this.className= className;
-        const label = document.createElement('label');
-        label.innerText = this.value;
-        label.className = this.className
-        label.setAttribute('for', this.value)
-        const form = document.querySelector('aside .my-form');
-        form.appendChild(label)
-    }
-}
-
-
-const myForm = new Form('filter-form');
-
-const vega = new Input('radio', 'hardware', 'vega');
-const vegaLabel = new Label ('vega', 'vega-label');
-
-const board = new Input('radio', 'hardware', 'board');
-const boardsLabel = new Label ('board', 'board-label');
-
-const form = document.querySelector('aside .my-form');
-const vegaContainer = document.createElement('div');
-vegaContainer.classList = 'vega-con';
-form.appendChild(vegaContainer);
-
-const boardContainer = document.createElement('div');
-boardContainer.classList = 'boards-con';
-form.appendChild(boardContainer);
-
-const vegaInput = document.querySelector('#vega');
-const myVega = document.querySelector('.vega-label')
-vegaContainer.appendChild(vegaInput);
-vegaContainer.appendChild(myVega);
-
-const boardInput = document.querySelector('#board');
-const myBoard = document.querySelector('.board-label');
-boardContainer.appendChild(boardInput);
-boardContainer.appendChild(myBoard);
-
-
-
-
-
-
+getData.addEventListener('click', myData);
