@@ -1,0 +1,50 @@
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+hello there !.... this text from ajax 
+
+
+
+// `
+//                 <section class="card-container">
+//                     <section class="card">
+//                         <section class="brand-image">
+//                             <img src="${products[1].category.image}" alt="img">
+//                         </section>
+//                         <section class="about">
+//                             <article class="price">
+//                                 <span>${products[1].price}</span>
+//                             </article>
+//                             <article class="discrip">
+//                                 <p>${products[1].description}</p>
+//                             </article>
+//                         </section>
+//                     </section>
+//             </section>
+//         `
